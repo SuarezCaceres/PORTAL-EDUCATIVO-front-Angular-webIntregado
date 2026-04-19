@@ -1,0 +1,26 @@
+<section class="hero-slider">
+  @for (slide of slides; track $index) {
+    <div 
+      class="slide" 
+      [class.active]="$index === currentIndex()"
+      [style.backgroundImage]="'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(' + slide.image + ')'">
+      
+      <div class="content">
+        <h1 class="fade-in">{{ slide.title }}</h1>
+      </div>
+    </div>
+  }
+
+  <button class="arrow prev" (click)="prevSlide()">&#10094;</button>
+  <button class="arrow next" (click)="nextSlide()">&#10095;</button>
+
+  <div class="indicators">
+    @for (slide of slides; track $index) {
+      <span 
+        class="dot" 
+        [class.active]="$index === currentIndex()"
+        (click)="currentIndex.set($index)">
+      </span>
+    }
+  </div>
+</section>

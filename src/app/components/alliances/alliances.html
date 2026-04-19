@@ -1,0 +1,27 @@
+<section class="alliances-section">
+  <div class="container">
+    <h2 class="main-title">HERRAMIENTAS QUE UTILIZAMOS</h2>
+
+    <div class="alliance-group">
+      <h3 class="group-subtitle">Convenios y Alianzas</h3>
+      <div class="logo-grid">
+        @for (uni of universities(); track uni.name) {
+          <div class="logo-item">
+            <img [src]="uni.logo" [alt]="uni.name">
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="alliance-group">
+      <h3 class="group-subtitle">Plataformas y Herramientas Educativas</h3>
+      <div class="logo-grid tools-grid">
+        @for (tool of tools(); track tool.name) {
+          <div class="logo-item">
+            <img [src]="tool.logo" [alt]="tool.name">
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

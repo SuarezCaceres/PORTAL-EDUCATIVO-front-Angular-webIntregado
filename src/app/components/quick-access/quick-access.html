@@ -1,0 +1,13 @@
+<section class="quick-access-section">
+  <div class="container-grid">
+    @for (item of accessItems(); track item.title) {
+      <div class="access-card">
+        <div class="icon-wrapper">
+          <span class="icon">{{ item.icon }}</span>
+        </div>
+        <h3 class="title">{{ item.title }}</h3>
+        <a [href]="item.link" class="overlay-link"></a>
+      </div>
+    }
+  </div>
+</section>

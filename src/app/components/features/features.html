@@ -1,0 +1,19 @@
+<section class="features-section">
+  <div class="features-container">
+    
+    <div class="features-content">
+      <h2 class="features-title">{{ featureData().title }}</h2>
+      
+      @for (paragraph of featureData().description; track $index) {
+        <p class="features-text">{{ paragraph }}</p>
+      }
+      
+      <button class="btn-explore">EXPLORAR MÁS</button>
+    </div>
+
+    <div class="features-image">
+      <img [src]="featureData().image" alt="Laboratorio de Cómputo San Agustín">
+    </div>
+
+  </div>
+</section>

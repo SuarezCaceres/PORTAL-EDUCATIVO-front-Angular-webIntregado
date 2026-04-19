@@ -1,0 +1,52 @@
+<footer class="main-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="San Agustín Logo">
+        <div>
+          <span class="brand-name">San Agustín</span>
+          <span class="brand-sub">LIMA</span>
+        </div>
+      </div>
+      <p class="social-title">Síguenos en:</p>
+      <div class="social-icons">
+        <a href="#" class="icon-social">f</a> <a href="#" class="icon-social">ig</a>
+        <a href="#" class="icon-social">yt</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Nosotros</h4>
+      <ul>
+        @for (link of aboutLinks; track link) {
+          <li><a href="#">{{ link }}</a></li>
+        }
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Académico</h4>
+      <ul>
+        @for (link of academicLinks; track link) {
+          <li><a href="#">{{ link }}</a></li>
+        }
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contáctenos</h4>
+      <p class="contact-item">📍 {{ contactInfo().address }}</p>
+      <p class="contact-item">✉️ {{ contactInfo().email }}</p>
+      <div class="phone-box">
+        <span class="phone-icon">📞</span>
+        <span class="phone-number">{{ contactInfo().phone }}</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>Política de privacidad de datos | Todos los derechos reservados © {{ currentYear() }}</p>
+  </div>
+</footer>

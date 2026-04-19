@@ -1,0 +1,84 @@
+.alliances-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+}
+
+.alliance-group {
+  margin-bottom: 50px;
+}
+
+.group-subtitle {
+  font-size: 1.2rem;
+  color: #004b93; 
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+
+.group-subtitle::before, .group-subtitle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: #004b93;
+}
+.group-subtitle::before { left: -60px; }
+.group-subtitle::after { right: -60px; }
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-item {
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%); 
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%); 
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.tools-grid .logo-item img {
+  max-height: 60px; 
+}
+
+@media (max-width: 768px) {
+  .logo-grid {
+    gap: 30px;
+  }
+  .group-subtitle::before, .group-subtitle::after {
+    display: none;
+  }
+}

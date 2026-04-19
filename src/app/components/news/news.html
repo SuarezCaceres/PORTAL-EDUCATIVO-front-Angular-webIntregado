@@ -1,0 +1,19 @@
+<section class="news-section">
+  <div class="news-container">
+    
+    <div class="news-image">
+      <img [src]="mainNews().image" alt="Estudiantes San Agustín">
+    </div>
+
+    <div class="news-content">
+      <h2 class="news-title">{{ mainNews().title }}</h2>
+      
+      @for (p of mainNews().paragraphs; track $index) {
+        <p class="news-text">{{ p }}</p>
+      }
+
+      <button class="btn-read-more">LEER MÁS</button>
+    </div>
+
+  </div>
+</section>
