@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: portal-educativo-web
+
+  # Opcional: Servicio para desarrollo
+  dev:
+    build:
+      context: .
+      target: builder
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    container_name: portal-educativo-dev
+    profiles:
+      - dev
