@@ -8,6 +8,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.css'
 })
 
-export class LoginComponent {
+export class Login {
 
 }

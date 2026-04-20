@@ -22,4 +22,4 @@ import { Footer } from '../footer/footer';
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class HomeComponent {}
+export class Home {}
